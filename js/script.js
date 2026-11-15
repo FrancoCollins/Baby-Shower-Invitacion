@@ -1,6 +1,32 @@
 ﻿(() => {
-  const target = new Date('2026-12-12T18:00:00+01:00').getTime();
   const $ = (id) => document.getElementById(id);
+  const welcomeScreen = $('welcome-screen');
+  const invitationContent = $('invitation-content');
+  if (welcomeScreen && invitationContent) {
+    document.body.classList.add('envelope-locked');
+    invitationContent.inert = true;
+    invitationContent.setAttribute('aria-hidden', 'true');
+    let isOpening = false;
+    document.querySelectorAll('.open-invitation').forEach((button) => {
+      button.addEventListener('click', () => {
+        if (isOpening) return;
+        isOpening = true;
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        welcomeScreen.classList.add('is-opening');
+        document.querySelectorAll('.open-invitation').forEach((control) => { control.disabled = true; });
+        window.setTimeout(() => {
+          welcomeScreen.classList.add('is-dismissed');
+          document.body.classList.remove('envelope-locked');
+          invitationContent.inert = false;
+          invitationContent.removeAttribute('aria-hidden');
+          $('hero-title').focus({ preventScroll: true });
+          window.setTimeout(() => welcomeScreen.remove(), reduceMotion ? 0 : 700);
+        }, reduceMotion ? 80 : 1150);
+      });
+    });
+  }
+
+  const target = new Date('2026-12-12T20:00:00+01:00').getTime();
   const timer = $('timer');
   const arrived = $('arrived');
   const updateCountdown = () => {
