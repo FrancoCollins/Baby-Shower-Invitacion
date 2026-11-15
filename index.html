@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6eee4">
   <meta name="description" content="Una invitación muy especial al Baby Shower de Franco y Agustina, el 12 de diciembre de 2026.">
-  <title>Franco & Agustina · Una dulce espera en acuarela</title>
+  <title>Franco & Agustina · Una dulce invitacion</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,6 +15,43 @@
 <body>
   <div class="page-grain" aria-hidden="true"></div>
   <main>
+    <section class="welcome-screen" id="welcome-screen" aria-labelledby="welcome-title">
+      <div class="welcome-sky" aria-hidden="true">
+        <span class="welcome-cloud welcome-cloud-left"></span>
+        <span class="welcome-cloud welcome-cloud-right"></span>
+        <span class="welcome-star welcome-star-one">✦</span>
+        <span class="welcome-star welcome-star-two">✧</span>
+        <span class="welcome-star welcome-star-three">✦</span>
+        <span class="welcome-petal welcome-petal-one"></span>
+        <span class="welcome-petal welcome-petal-two"></span>
+      </div>
+      <div class="welcome-copy">
+        <p class="eyebrow">Franco & Agustina</p>
+        <h1 id="welcome-title">Has recibido una invitación<br><em>muy especial</em></h1>
+        <p>Una dulce espera · 12.12.2026</p>
+      </div>
+      <div class="envelope-stage">
+        <div class="envelope-letter" aria-hidden="true">
+          <span class="letter-eyebrow">Con mucho cariño</span>
+          <strong>Franco & Agustina</strong>
+          <span>Baby Shower · 12.12.2026</span>
+          <span class="letter-heart">♡</span>
+        </div>
+        <img class="envelope-bear envelope-bear-main" src="assets/images/teddy-balloons.png" alt="" aria-hidden="true">
+        <img class="envelope-bear envelope-bear-sleepy" src="assets/images/teddy-sleeping.png" alt="" aria-hidden="true">
+        <div class="envelope-body" aria-hidden="true">
+          <div class="envelope-back"></div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-seal">♡</div>
+        </div>
+        <button class="envelope-hit-area open-invitation" type="button" aria-label="Abrir el sobre y descubrir la invitación"></button>
+      </div>
+      <p class="welcome-hint">Toca el sobre para abrirlo</p>
+      <button class="button button-primary welcome-button open-invitation" type="button">Descubrir la invitación <span aria-hidden="true">↓</span></button>
+    </section>
+
+    <div id="invitation-content">
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero-sky" aria-hidden="true">
         <span class="moon"></span><span class="star star-a">✦</span><span class="star star-b">✧</span><span class="star star-c">✦</span>
@@ -23,7 +60,7 @@
       </div>
       <div class="hero-copy">
         <p class="eyebrow reveal">Una dulce espera · 12.12.2026</p>
-        <h1 id="hero-title" class="reveal">¡Estamos esperando<br>a alguien <em>muy especial!</em></h1>
+        <h1 id="hero-title" class="reveal" tabindex="-1">¡Estamos esperando<br>a alguien <em>muy especial!</em></h1>
         <div class="hero-names reveal">Franco <span>&</span> Agustina</div>
         <p class="hero-subtitle reveal">Nuestro Baby Shower</p>
         <a class="button button-primary reveal" href="#historia">Descubrir nuestra invitación <span aria-hidden="true">↓</span></a>
@@ -65,7 +102,7 @@
           <div class="time-unit"><strong id="minutes">00</strong><span>minutos</span></div><i>:</i>
           <div class="time-unit"><strong id="seconds">00</strong><span>segundos</span></div>
         </div>
-        <p class="timer-note" id="timer-note">Sábado, 12 de diciembre · 20:00 · Madrid</p>
+        <p class="timer-note" id="timer-note">Sábado, 12 de diciembre · 20:00 · Logroño</p>
         <p class="arrived" id="arrived" hidden>¡Ha llegado el gran día! <span>♥</span></p>
       </div>
     </section>
@@ -92,6 +129,7 @@
       <p class="handwritten">Con mucho cariño,<br><span>Franco & Agustina</span></p>
       <span class="footer-date">12 · 12 · 2026</span>
     </footer>
+    </div>
   </main>
 </body>
 </html>
