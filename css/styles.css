@@ -96,3 +96,10 @@ body.envelope-locked{overflow:hidden}
 
 .button-whatsapp{position:relative;width:min(100%,375px);padding-right:52px}
 .button-arrow{position:absolute;right:21px;color:#fff;font-size:24px;line-height:1}
+
+
+/* Acciones de ubicación y asistencia */
+.button-outline{grid-column:1/-1;justify-self:center;align-self:center;position:relative;margin:22px 0 0;padding-right:48px;gap:10px}
+.location-icon{width:20px;height:20px;flex:none;fill:currentColor}
+.button-arrow{position:absolute;right:18px;color:currentColor;font-size:22px;font-weight:500;line-height:1}
+.button-whatsapp{position:relative;width:min(100%,375px);padding-right:52px}
