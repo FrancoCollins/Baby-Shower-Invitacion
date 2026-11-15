@@ -12,16 +12,13 @@
         if (isOpening) return;
         isOpening = true;
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        welcomeScreen.classList.add('is-opening');
         document.querySelectorAll('.open-invitation').forEach((control) => { control.disabled = true; });
-        window.setTimeout(() => {
-          welcomeScreen.classList.add('is-dismissed');
-          document.body.classList.remove('envelope-locked');
-          invitationContent.inert = false;
-          invitationContent.removeAttribute('aria-hidden');
-          $('hero-title').focus({ preventScroll: true });
-          window.setTimeout(() => welcomeScreen.remove(), reduceMotion ? 0 : 700);
-        }, reduceMotion ? 80 : 1150);
+        welcomeScreen.classList.add('is-dismissed');
+        document.body.classList.remove('envelope-locked');
+        invitationContent.inert = false;
+        invitationContent.removeAttribute('aria-hidden');
+        $('hero-title').focus({ preventScroll: true });
+        window.setTimeout(() => welcomeScreen.remove(), reduceMotion ? 0 : 700);
       });
     });
   }
